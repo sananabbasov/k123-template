@@ -1,0 +1,201 @@
+#header {
+
+    width: 100%;
+
+    .nav-top {
+        border-bottom: $bordergrey;
+
+        .mycontainer {
+            width: $container-lg;
+            margin: auto;
+            font-family: $fontfamily;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 13px;
+
+            .left {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 43%;
+
+                .social {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+
+                    .social-text {
+                        margin: 0 5px;
+                    }
+                }
+
+                .shipping-info {
+                    a {
+                        color: $orange;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .right {
+                ul {
+                    display: flex;
+
+                    .items {
+                        list-style: none;
+                        margin-left: 10px;
+                        position: relative;
+
+                        a {
+                            text-decoration: none;
+                            color: $textColor;
+                        }
+
+                        &:hover {
+                            .submenu {
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+
+                        .submenu {
+                            transition: 0.5s ease;
+                            position: absolute;
+                            border: $bordergrey;
+                            min-width: 120px;
+                            visibility: hidden;
+                            opacity: 0;
+                            background-color: #fff;
+
+                            ul {
+                                display: flex;
+                                flex-direction: column;
+
+                                li {
+                                    list-style: none;
+                                    padding: 10px 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .navbararea {
+        padding: 20px 0;
+        font-family: $fontfamily;
+
+        .mycontainer {
+            width: $container-lg;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                width: 15%;
+                justify-content: space-between;
+                align-items: center;
+
+                .menu {
+                    font-size: 25px;
+                }
+
+                .myimage {
+                    width: 70%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .search {
+                width: 60%;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    background-color: $grey;
+                    border: none;
+                    padding: 5px 5px 5px 15px;
+                    font-size: 25px;
+                }
+
+                input {
+                    height: 45px;
+                    background-color: $grey;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                }
+
+                select {
+                    border: 1px solid $grey;
+                    background-color: $grey;
+                    outline: none;
+                    border-left: 1px solid #b9b9b9;
+                }
+            }
+        }
+    }
+
+    .infoList {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10%;
+        font-size: 20px;
+
+        .heart {
+            position: relative;
+
+            .top-icon {
+                font-size: 14px;
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                background-color: $red;
+                color: #fff;
+                border-radius: 9px;
+                width: 16px;
+                height: 16px;
+                text-align: center;
+            }
+        }
+        .basket{
+            position: relative;
+
+            .top-icon {
+                font-size: 14px;
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                background-color: $red;
+                color: #fff;
+                border-radius: 9px;
+                width: 16px;
+                height: 16px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1079px) {
+    #header{
+        .nav-top{
+            display: none;
+        }
+        .navbararea{
+            display: none;
+        }
+    }
+}
